@@ -13,3 +13,6 @@ print("Sum of %d and %d is %d"%(a,b,c))
 print("Sum is {}".format(c))
 print("Sum of {} and {} is {}".format(a,b,c))
 print("Sum of {1} and {2} is {0}".format(c,a,b))
+
+#f-strings - format Strings
+print(f"Sum of {a} and {b} is {c}")

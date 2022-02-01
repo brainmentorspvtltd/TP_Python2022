@@ -1,0 +1,33 @@
+Input
+
+Data Types in Python
+
+
+  Numeric       String       Bytes        Boolean        Data Collection
+  - int         - str       - bytes       - True	 - List
+  - float				  - False	 - Tuples
+  - complex						 - Dictionary		
+							 - Sets
+
+Everything is Object
+
+Loops
+- for     - loop in a range / limit
+- while   - loop based on a condition
+
+for loop
+
+for var_name in range(start, stop, step=1):
+    print(...)    # Inside Loop
+    print(...)    # Inside Loop
+
+# 4 spaces - indentation
+
+print(....)   # Outside Loop
+
+
+
+
+
+
+
