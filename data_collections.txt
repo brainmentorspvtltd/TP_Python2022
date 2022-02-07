@@ -1,0 +1,60 @@
+OS
+
+===================================
+API Calls - Weather / Covid / 
+Web Scraping - what is .... ?
+===================================
+
+Data Collections
+
+Strings
+- collection of letters, words, para...
+- represented by "", '', """""", ''''''
+- strings are immutable (cannot be modified)
+
+List
+- collection of any type of data
+- represented by [...]
+
+Tuples
+- similar to list, but immutable
+- represented by (...)
+
+Dictionary
+- Collection of data in key value pair
+- represented by {key : value, key : value}
+
+Set
+- collection of unique and unordered data
+- represented by {...}
+
+=========================================
+
+Strings
+
+- indexing & slicing
+- methods
+
+text = "hello world"
+
+change case
+- lower
+- upper
+- swapcase
+- capitalize
+- title
+
+find index of any character
+- find
+- index
+- rfind
+- rindex
+
+count occurrence of a character
+- count
+
+- split
+- join
+- strip
+- lstrip
+- rstrip
