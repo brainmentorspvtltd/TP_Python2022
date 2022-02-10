@@ -1,21 +1,33 @@
 import bs4
 import urllib.request as url
 
-path = "https://indianexpress.com/"
+path = "https://www.indiatoday.in/"
+
+response = url.urlopen(path)
+page = bs4.BeautifulSoup(response, 'lxml')
+newsList = page.find('ul', class_='itg-listing')
+newsData = newsList.findAll('li')
+for item in newsData:
+    print(item.text)
+    print("*" * 40)
+    
 
 print("""
 Which Category you want ?
 Sports
-Entertainment
-World
-Cities
+Elections
+Technology
 """)
 
 category = input("Enter Category : ")
-path = path+"section/{}".format(category.lower())
+category = category.lower()
+path = path+category
 
 response = url.urlopen(path)
 html = bs4.BeautifulSoup(response, 'lxml')
-newsList = html.findAll('li', {'class' : "swiper-slide"})
-for news in newsList:
-    print(news.text.strip('\n'))
+newsList = html.find('ul', class_='itg-listing')
+newsData = newsList.findAll('li')
+for item in newsData:
+    print(item.text)
+    print("*" * 40)
+

@@ -35,29 +35,36 @@ while chat:
         os.startfile(random_song)
 
     elif msg in newsIntent:
-        path = "https://indianexpress.com/"
+        path = "https://www.indiatoday.in/"
+
         response = url.urlopen(path)
+        page = bs4.BeautifulSoup(response, 'lxml')
+        newsList = page.find('ul', class_='itg-listing')
+        newsData = newsList.findAll('li')
+        for item in newsData:
+            print(item.text)
+            print("*" * 40)
+            
 
-        html = bs4.BeautifulSoup(response, 'lxml')
-        headline = html.find('h1', class_='t-elecblock-heading')
-        print("Headline ::",headline.text)
-
-        topNews = html.find('div', {'class' : 'top-news'})
-        newsList = topNews.findAll('li')
-        print("Top News...")
-        for news in newsList:
-            print(news.text)
-            print("*" * 50)
+        print("""
+        Which Category you want ?
+        Sports
+        Elections
+        Technology
+        """)
 
         category = input("Enter Category : ")
-        path = path+"section/{}".format(category.lower())
+        category = category.lower()
+        path = path+category
 
         response = url.urlopen(path)
         html = bs4.BeautifulSoup(response, 'lxml')
-        newsList = html.findAll('li', {'class' : "swiper-slide"})
-        for news in newsList:
-            print(news.text.strip('\n'))
-            print("*" * 50)
+        newsList = html.find('ul', class_='itg-listing')
+        newsData = newsList.findAll('li')
+        for item in newsData:
+            print(item.text)
+            print("*" * 40)
+
 
     elif msg == "bye":
         print("Bye User")
