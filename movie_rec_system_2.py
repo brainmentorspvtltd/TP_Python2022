@@ -11,42 +11,8 @@ dataset = {
                 "conjuring","conjuring 2","bhootnath","aatma"]
 }
 
-user = {"kgf", "zero", "superman", "batman", "evil dead", "sultan",
+user_1 = {"kgf", "zero", "superman", "batman", "evil dead", "sultan",
           "golmaal", "krrish", "bala"}
 
-#scores = {"action":0.33, "comedy":20...} using jaccard distance formula
-#find the genre with max score
-#recommend movies from that genre which has max score and user has not watched those movies yet...
-
-scores = {}
-for item in dataset:
-    movies = set(dataset[item])
-    intersection = user.intersection(movies)
-    union = user.union(movies)
-    dist = len(intersection) / len(union)
-    scores[item] = round(dist,2)
-
-print(scores)
-
-category = max(scores, key=scores.get)
-
-recommendedMovies = set(dataset[category]) - user
-print(recommendedMovies)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+user_2 = {"kgf", "zero", "superman", "batman", "evil dead", "sultan",
+          "golmaal", "krrish", "bala"}
