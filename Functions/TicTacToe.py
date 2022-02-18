@@ -1,4 +1,7 @@
+import random
+
 positions = [i for i in range(1,10)]
+occupied = []
 def gameBoard():
     print("""
     {}  |  {}  |  {}
@@ -14,10 +17,21 @@ def checkWinner():
     pass
 
 def userMove(choice):
-    pass
+    pos = int(input("Enter the position : "))
+    positions[pos - 1] = choice
+    occupied.append(pos)
+    checkWinner()
 
 def cpuMove(choice):
-    pass
+    pos = random.randint(1,9)
+    if pos in occupied:
+        print("Already Occupied :",pos)
+        cpuMove(choice)
+    else:
+        print("CPU Moved at :",pos)
+        positions[pos - 1] = choice
+        occupied.append(pos)
+        checkWinner()
 
 def main():
     gameBoard()
@@ -27,10 +41,12 @@ def main():
     else:
         cpuChoice = "X"
 
-    userMove(userChoice)
-    gameBoard()
+    game = True
+    while game:
+        userMove(userChoice)
+        gameBoard()
 
-    cpuMove(cpuChoice)
-    gameBoard()
+        cpuMove(cpuChoice)
+        gameBoard()
 
 main()
