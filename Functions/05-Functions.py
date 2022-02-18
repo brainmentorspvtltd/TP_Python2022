@@ -27,7 +27,15 @@ num_1 = int(input("Enter first number : "))
 num_2 = int(input("Enter second number : "))
 
 # Solution_1 : Using List
-operations = [add, sub, div, mul]
-operations[ch - 1](num_1, num_2)
+# operations = [add, sub, div, mul]
+# operations[ch - 1](num_1, num_2)
 
 # Solution_2 : Using Dictionary
+operations = {
+    1 : add,
+    2 : sub,
+    3 : div,
+    4 : mul
+}
+
+operations.get(ch)(num_1, num_2)
