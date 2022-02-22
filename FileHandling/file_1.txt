@@ -1,0 +1,42 @@
+File Handling
+- Read
+- Write
+
+Steps to perform file handling
+- Open file
+- Read/Write
+- Close
+
+2 type of file
+- text
+- binary
+
+Modes used while opening a file
+
+					text   			binary
+---------------------------------------
+read 				rt/r				rb
+write				wt/w/x			wb/xb
+append			a					ab
+
+Exception Handling
+
+try      : business logic
+except   : handle exceptions
+else     : if there is no error then else will execute
+finally  : it will always execute
+
+Exceptions are of 2 types
+- Pre defined 
+- User defined
+
+Python Exception Hierarchy
+
+BaseException
+
+
+
+
+
+
+
