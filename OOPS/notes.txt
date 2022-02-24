@@ -1,0 +1,24 @@
+Major Types of programming
+- Procedural
+- OOPS
+- Functional
+
+Object Oriented Programming
+- class
+- object
+
+GUI Application
+- pyQt
+
+1. pip install PyQt5
+2. Download and install qt designer
+
+python -m PyQt5.uic.pyuic -x designer.ui -o file.py
+
+1. Design a GUI
+2. Save your GUI
+3. Execute the command on terminal or cmd
+
+
+
+
